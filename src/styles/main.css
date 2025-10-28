@@ -1,21 +1,148 @@
-body {
-  font-family: 'Inter', sans-serif;
+/* Global Styles for TicketFlow Vue Version */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #2575fc;
+  --secondary-color: #6a11cb;
+  --text-light: #ffffff;
+  --text-dark: #1e1e2f;
+  --gradient-bg: linear-gradient(to bottom right, var(--secondary-color), var(--primary-color));
+}
+
+* {
   margin: 0;
-  background-color: #fff;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fc;
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
 a {
-  color: #007bff;
   text-decoration: none;
+  color: inherit;
 }
 
-a:hover {
-  text-decoration: underline;
+button {
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.max-container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 2rem;
+.landing-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: var(--gradient-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-light);
+  overflow: hidden;
+  text-align: center;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+/* Decorative Circle */
+.circle-deco {
+  position: absolute;
+  top: -100px;
+  right: -120px;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(45px);
+  z-index: 0;
+}
+
+/* Content */
+.landing-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.landing-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.landing-content p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.primary-btn {
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.secondary-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Wave background */
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing-content p {
+    font-size: 1rem;
+  }
+
+  .landing-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .circle-deco {
+    width: 250px;
+    height: 250px;
+    top: -60px;
+    right: -80px;
+  }
 }

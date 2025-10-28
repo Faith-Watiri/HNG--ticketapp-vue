@@ -1,13 +1,13 @@
 <template>
-  <div id="app">
-    <Navbar />
-    <router-view />
-    <Footer />
-  </div>
+  <router-view />
 </template>
 
-<script setup lang="ts">
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+<script setup>
+// nothing here
 </script>
 
+<style>
+body {
+  margin: 0;
+}
+</style>

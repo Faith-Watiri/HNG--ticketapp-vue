@@ -1,5 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import type { RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, } from 'vue-router'
 
 import Landing from '@/pages/Landing.vue'
 import Dashboard from '@/pages/Dashboard.vue'
